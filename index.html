@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ 
+<head>
+  <meta charset="utf-8">
+  <title id="unittab">Unit Set Builder</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+ 
+<body onload="titleupdate()">
+
+<p>
+<label for="html">Unit Builder</label>
+</p>
+
+<table class="table" >
+  <tr>
+    <td> <input type="button" value="Unit Points" id="btn" /> </td>
+    <td> <input type="text" value="N/A" size="5" readonly="readonly" id="unittot1"/></td>
+  </tr>
+  <tr>
+    <td> <label for="html">Unit Name</label>
+    <td> <input type="text" value="Nameless" size="10" id="namebox" onChange="refresh()"/> </td>
+    <td> <label for="html">Unit Size</label>
+    <td> <select id="sizesel" name="sizesel" onChange="abdrop()">
+                <option value="size">Size</option>
+  		<option value="small">Small</option>
+  		<option value="Med">Medium</option>
+  		<option value="large">Large</option>
+	  </select>
+    <td> <label for="space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label> 
+    <td> <label for="html">Foraged Dice</label>
+  </tr>
+</table>
+
+<table class="table">
+  <tr>
+    <td> <label for="html">Description</label>
+    <td> <input type="text" value="" size="37"/> </td>
+    <td> <label for="space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label> 
+</table>
+
+<table class="spectable">
+  <tr>
+    <td> <label for="html">Hit Points</label>
+    <td> <input type="text" value="0" size="3" id="hp" onChange="refresh()"/> </td> 
+  </tr>
+  <tr>
+    <td> <label for="html">Movement</label>
+    <td> <input type="text" value="0" size="3" id="mov" onChange="refresh()"/> </td>
+  </tr>
+  <tr>
+    <td> <label for="html">Force</label>
+    <td> <input type="text" value="0" size="3" id="frc" onChange="refresh()"/> </td>
+  </tr>
+  <tr>
+    <td> <label for="html">Range (x5cm)</label>
+    <td> <input type="text" value="0" size="3" id="rng" onChange="refresh()"/> </td>
+  </tr>
+</table>
+
+<br>
+<label>Abilities</label>
+
+<table class="spectable">
+  <tr>
+    <td> <label for="html">Ability 1 / Name</label> </td>
+    <td> <input type="text" value="" size="10" id="ab1name"</td>
+    <td> <input type="text" value="0" size="3" id="ab1pnts" readonly="readonly"</td>
+    <td> <label for="html">Points</label> </td>
+  </tr>
+</table>
+<select name="ab1" id="ab1" onChange="abpnts(id)">
+	  </select> 
+<table class="spectable">
+  <tr>
+    <td> <label for="html">Ability 2 / Name</label></td>
+    <td> <input type="text" value="" size="10" id="ab2name"</td>
+    <td> <input type="text" value="0" size="3" id="ab2pnts" readonly="readonly"</td>
+    <td> <label for="html">Points</label></td>
+  </tr>
+</table>
+
+<select name="ab2" id="ab2" onChange="abpnts(id)">
+	  </select>
+
+<table class="spectable">
+  <tr>
+    <td> <label for="html">Ability 3 / Name</label> </td>
+    <td> <input type="text" value="" size="10" id="ab3name"</td>
+    <td> <input type="text" value="0" size="3" id="ab3pnts" readonly="readonly"</td>
+    <td> <label for="html">Points</label></td>
+  </tr>
+</table>
+
+<select name="ab3" id="ab3" onChange="abpnts(id)">
+	  </select> 
+
+
+<p>
+<label>Key: [DX] = Foraged Die  (DX) = Rolled Die  [X] = Any foraged die of that value </label>;
+</p>
+<p>
+<a href="index.html" rel="noopener noreferrer" target="_blank">Add unit on new tab</a>
+</p>
+<script type="text/javascript" src="script.js"></script>
+ 
+</body>
+ 
+</html>
