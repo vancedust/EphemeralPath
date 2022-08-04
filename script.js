@@ -70,18 +70,21 @@ function abdrop(){
     // Optional: Clear all existing options first:
     select.innerHTML = "";
     if (minisize == "small"){
+      document.getElementById("bspoint").innerHTML = "10 - 25";
       for(var i = 0; i < optionsm.length; i++) {
     	  var opt = optionsm[i];
     	  select.innerHTML += "<option value=\"" + opt + "\">" + opt + "</option>";
       }
     }
     if (minisize == "Med"){
+      document.getElementById("bspoint").innerHTML = "15 - 30";
       for(var l = 0; l < optionmd.length; l++) {
     	  var opt = optionmd[l];
     	  select.innerHTML += "<option value=\"" + opt + "\">" + opt + "</option>";
       }
     }
     if (minisize == "large"){
+      document.getElementById("bspoint").innerHTML = "20 - 35";
       for(var l = 0; l < optionlg.length; l++) {
     	  var opt = optionlg[l];
     	  select.innerHTML += "<option value=\"" + opt + "\">" + opt + "</option>";
