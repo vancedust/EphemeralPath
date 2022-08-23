@@ -50,6 +50,7 @@ function abpnts(id){
     var textname = id + "pnts";
     if (pstring == "Select Ability"){
         document.getElementById(textname).value = 0;
+	refresh()
 	return
     }
     var pntsarray = pstring.split(';');
