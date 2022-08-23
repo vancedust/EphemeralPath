@@ -47,12 +47,17 @@ function refresh(){
 
 function abpnts(id){
     var pstring = document.getElementById(id).value;
+    var textname = id + "pnts";
+    if (pstring == "Select Ability"){
+        document.getElementById(textname).value = 0;
+	return
+    }
     var pntsarray = pstring.split(';');
-    var abpoints = pntsarray[2]
-    var textname = id + "pnts"
-    document.getElementById(textname).value = abpoints
+    var abpoints = pntsarray[2];
+    document.getElementById(textname).value = abpoints;
     refresh()
 }
+
 
 
 //Sets ability drop downs by units
