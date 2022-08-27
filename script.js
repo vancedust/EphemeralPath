@@ -68,7 +68,7 @@ function abdrop(){
     document.getElementById("ab3pnts").value = 0
     var optionsm = ["Select Ability", "SO1; Pnts; 4; Attack Target 1 Range +2 Force + [D6]", "SO2; pnts; 5; Attack Target 1 Force+[D10]", "SD1; pnts; 2; Defend - Reduce attack damage by [D4] if within defending figure's range", "SD2; pnts; 8; Defend - Reduce attack damage by [D12] from any range", "SS1; pnts; 3;Reduce climbing height by [D8]"];
     var optionmd = ["Select Ability","MO1; Pnts; 2;Melee Target 1 Immobilize [D4]", "MO2; Pnts; 6;Mine Passive Base Contact [D10]", "MD1; Pnts; 2;Defend- Reduce attack damage by [D4] if within defending figure’s range", "MD2; Pnts; 8;Defend- Reduce attack damage by [D12] from any range", "MS1; Pnts; 6;Target 1 push or pull another unit within range by [D8]"];
-    var optionlg = ["Select Ability", "LO1; Pnts; 12;Attack Target 3 Range + 1 Immobile - Form up to 3 attack dice pools with any foraged dice. Ignore foraged value and re-roll dice for each attack", "LD1; Pnts; 2;Defend- Reduce attack damage by [D4] if within defending figure’s range", "LS1; Pnts; 4 - [D6] Reduce a foraged D6 on this figure by 2 then increase any other die on any figure within range by 2"];
+    var optionlg = ["Select Ability", "LO1; Pnts; 12;Attack Target 3 Range + 1 Immobile - Form up to 3 attack dice pools with any foraged dice. Ignore foraged value and re-roll dice for each attack", "LD1; Pnts; 2;Defend- Reduce attack damage by [D4] if within defending figure’s range", "LS1; Pnts; 4 - [D6] Reduce a foraged D6 on this figure by 2 then increase any other die on any figure within range by 2, Reocurring"];
 
     // start filling in drop down boxes ability 1
     var select = document.getElementById("ab1");
