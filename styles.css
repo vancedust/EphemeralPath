@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+:root{
+  --statimg: url("invalid.png");
+}
+
 #btn {
     background-color: #fb0066;
 }
@@ -13,4 +17,10 @@ input[type=button] {
     outline: none;
 }
 .spectable{
+}
+
+body {
+ background-image: var(--statimg);
+ background-repeat:no-repeat;
+ min-width:1050px;
 }
