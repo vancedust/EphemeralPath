@@ -87,6 +87,7 @@ function abpnts(id){
 
 //Sets ability drop downs by units
 function abdrop(){
+    statimgupdate()
     document.getElementById("ab1pnts").value = 0
     document.getElementById("ab2pnts").value = 0
     document.getElementById("ab3pnts").value = 0
