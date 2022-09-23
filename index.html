@@ -17,16 +17,18 @@
   <tr>
     <td> <input type="button" value="Unit Points" id="btn" /> </td>
     <td> <input type="text" value="N/A" size="5" readonly="readonly" id="unittot1"/></td>
+    <td> <label for="html">Unit Name</label>
+    <td> <input type="text" value="Nameless" size="10" id="namebox" onChange="refresh()"/> </td>	  
   </tr>
   <tr>
-    <td> <label for="html">Unit Name</label>
-    <td> <input type="text" value="Nameless" size="10" id="namebox" onChange="refresh()"/> </td>
+    <td> <label for="html">Base Diameter (mm)</label>
+    <td> <input type="text" value="0" size="10" id="basedia" onChange="refresh()"/> </td>
     <td> <label for="html">Unit Size</label>
     <td> <select id="sizesel" name="sizesel" onChange="abdrop()">
-                <option value="size">Size</option>
-  		<option value="small">Small</option>
-  		<option value="Med">Medium</option>
-  		<option value="large">Large</option>
+                <option value="size">Class</option>
+  		<option value="dis">Disrupter</option>
+  		<option value="tac">Tactician</option>
+  		<option value="lea">Leader</option>
 	  </select>
     <td> <label for="space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label> 
   </tr>
