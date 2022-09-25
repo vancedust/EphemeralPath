@@ -38,13 +38,13 @@ function statimgupdate(){
     var basedim = document.getElementById("basedia").value
     var actnum = 3
     if (minisize == "lea"){
-      actnum = 2
+      actnum = 2;
     }
     if (basesum > 30){
-      actnum = 2
+      actnum = 2;
     }
     if (basedim > 55){
-      actnum = 2
+      actnum = 2;
     }
     var imname = 'url("backa' + actnum + 'h' + hp_i +'.png")'
     bck.style.setProperty('--statimg', imname);
