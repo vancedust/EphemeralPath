@@ -33,9 +33,9 @@ function statimgupdate(){
     var frc_i = parseInt(frc_s);
     var rng_s = document.getElementById("rng").value;
     var rng_i = parseInt(rng_s);
-    var basesum = hp_i + mov_i + frc_i + rng_i
-    var minisize = document.getElementById("sizesel").value
-    var basedim = document.getElementById("basedia").value
+    var basesum = document.getElementById("unittot1").value;
+    var minisize = document.getElementById("sizesel").value;
+    var basedim = document.getElementById("basedia").value;
     var actnum = 3
     if (minisize == "lea"){
       actnum = 2;
