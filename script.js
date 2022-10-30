@@ -40,9 +40,6 @@ function statimgupdate(){
     if (minisize == "lea"){
       actnum = 2;
     }
-    if (basesum > 30){
-      actnum = 2;
-    }
     if (basedim > 55){
       actnum = 2;
     }
@@ -96,37 +93,25 @@ function abdrop(){
     document.getElementById("ab2pnts").value = 0
     document.getElementById("ab3pnts").value = 0
     var optionsm = ["Select Ability",
-		    "DO1; Pnts; 4; Attack Target 1 Range +2 Force + [D6]",
-		    "DO2; pnts; 5; Attack Target 1 Force+[D10]",
-		    "DO3; pnts; 8; Melee (D8), Rush",
-		    "DD1; pnts; 2; Defend - Reduce attack damage by [D4] or [(D4)]",
-		    "DD4; pnts; 5; Defend - Reduce attack damage by [D8] or [(D8)]",
-		    "DD2; pnts; 7; Defend - Reduce attack damage by [D12] or [(D12)]",
-		    "DD3; pnts; 4; Heal Any figure Range +1, [D6]",
-		    "DS1; pnts; 3;Reduce climbing height by [D8]",
-		    "DS2; pnts; 2; Sneak"];
+		    "D1; Pnts; 6; Attack - Targets 2 - Range 1 - Damage: Force + [D4]",
+		    "D2; Pnts; 3; 2 Spray Damage after standard attack - Spray Range 1 [D4]",
+		    "D3; Pnts; 5; Attack - Damage: [D4] - Range 1 - Rush",
+      	     	    "D4; Pnts; 4; Attack - Target 1 - Range +2 - Damage: Force + [D6]",
+		    "D5; Pnts; 6; Attack - Range +6 - Damage: [(D6)]",
+		    "D6; Pnts; 3; Prep - Use 1 prep token to increase this figure’s force by 4 for it’s next attack - Recurring",
+		    "D7; Pnts; 7; Melee - Damage: [(D8)] - Rush",
+		    "D8; Pnts; 5; Attack - Target 1 - Range +2 - Damage: Force + [D8]",
+		    "D9; Pnts; 5; Attack - Target 1 - Damage: Force + [D10]",
+		    "D10; Pnts; 6; Attack - Damage: 0 - Immobilize - Add 2 spray damage for each prep token discarded [D10]",
+		    "D11; Pnts; 6; Melee - Damage [D12] - Resistible + 2",
+		    "D12; Pnts; 8; Attack - Damage: [D12] + 2 - Immobile - Gain 1 Prep token"];
+
     var optionmd = ["Select Ability",
-		    "TO1; Pnts; 2;Melee Target 1 Immobilize [D4]",
-		    "TO2; Pnts; 6;Mine Passive Base Contact [D10]",
-		    "TO3; pnts; 8; Remove 1 action token from target figure Range - 1 [2/3/4] Defendable",
-		    "TO4; pnts; 8; Mine Active Base contact [D8]",
-		    "TD1; pnts; 2; Defend - Reduce attack damage by [D4] or [(D4)]",
-		    "TD4; pnts; 5; Defend - Reduce attack damage by [D8] or [(D8)]",
-		    "TD2; pnts; 7; Defend - Reduce attack damage by [D12] or [(D12)]",
-		    "TD3; pnts; 4; Heal [D6] Any figure Range +1",
-		    "TS1; Pnts; 6;Target 1 push or pull another unit within range by [D8]", "MS2; pnts; 3; Sneak"];
+		    ];
     var optionlg = ["Select Ability",
-		    "LO1; Pnts; 12;Attack Target 3 Range + 1 Immobile - Form up to 3 attack dice pools with any foraged dice. Ignore foraged value and re-roll dice for each attack",
-		    "LO2; pnts; 10; Mine Active Range 1 [D10]",
-		    "LD1; pnts; 2; Defend - Reduce attack damage by [D4] or [(D4)]",
-		    "LD4; pnts; 5; Defend - Reduce attack damage by [D8] or [(D8)]",
-		    "LD2; pnts; 7; Defend - Reduce attack damage by [D12] or [(D12)]",
-		    "LD2; pnts; 15; Heal Target 3 Range + 3 [Up to any 3]",
-		    "LD3; pnts; 10; Heal Full Health All [8/9/10]",
-		    "LS1; Pnts; 4 - [D6] Reduce a foraged D6 on this figure by 2 then increase any other die on any figure within range by 2",
-		    "LS2; pnts; 8; Give another figure that hasn’t been activated 1 additional action [5/8]",
-		    "LS3; pnts; 10; Push or pull up to two units by [D6]"];
-    
+		    ];
+var optionrn = ["Select Ability",   ] 
+
     // start filling in drop down boxes ability 1
     var select = document.getElementById("ab1");
     var minisize = document.getElementById("sizesel").value
@@ -136,6 +121,12 @@ function abdrop(){
       document.getElementById("bspoint").innerHTML = "10 - 25";
       for(var i = 0; i < optionsm.length; i++) {
     	  var opt = optionsm[i];
+    	  select.innerHTML += "<option value=\"" + opt + "\">" + opt + "</option>";
+      }
+    if (minisize == "run"){
+      document.getElementById("bspoint").innerHTML = "10 - 25";
+      for(var i = 0; i < optionrn.length; i++) {
+    	  var opt = optionrn[i];
     	  select.innerHTML += "<option value=\"" + opt + "\">" + opt + "</option>";
       }
     }
@@ -166,6 +157,12 @@ function abdrop(){
     	  var opt = optionsm[i];
     	  select.innerHTML += "<option value=\"" + opt + "\">" + opt + "</option>";
       }
+    if (minisize == "run"){
+      document.getElementById("bspoint").innerHTML = "10 - 25";
+      for(var i = 0; i < optionrn.length; i++) {
+    	  var opt = optionrn[i];
+    	  select.innerHTML += "<option value=\"" + opt + "\">" + opt + "</option>";
+      }
     }
     if (minisize == "tac"){
       document.getElementById("bspoint").innerHTML = "15 - 30";
@@ -191,6 +188,11 @@ function abdrop(){
     if (minisize == "dis"){
       for(var i = 0; i < optionsm.length; i++) {
     	  var opt = optionsm[i];
+    	  select.innerHTML += "<option value=\"" + opt + "\">" + opt + "</option>";
+      }
+    if (minisize == "run"){
+      for(var i = 0; i < optionrn.length; i++) {
+    	  var opt = optionrn[i];
     	  select.innerHTML += "<option value=\"" + opt + "\">" + opt + "</option>";
       }
     }
