@@ -110,7 +110,7 @@ function abdrop(){
 		    ];
     var optionlg = ["Select Ability",
 		    ];
-var optionrn = ["Select Ability",   ] 
+    var optionrn = ["Select Ability",   ]; 
 
     // start filling in drop down boxes ability 1
     var select = document.getElementById("ab1");
