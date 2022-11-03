@@ -93,24 +93,60 @@ function abdrop(){
     document.getElementById("ab2pnts").value = 0
     document.getElementById("ab3pnts").value = 0
     var optionsm = ["Select Ability",
-		    "D1; Pnts; 6; Attack - Targets 2 - Range 1 - Damage: Force + [D4]",
-		    "D2; Pnts; 3; 2 Spray Damage after standard attack - Spray Range 1 [D4]",
-		    "D3; Pnts; 5; Attack - Damage: [D4] - Range 1 - Rush",
-      	     	    "D4; Pnts; 4; Attack - Target 1 - Range +2 - Damage: Force + [D6]",
-		    "D5; Pnts; 6; Attack - Range +6 - Damage: [(D6)]",
-		    "D6; Pnts; 3; Prep - Use 1 prep token to increase this figure’s force by 4 for it’s next attack - Recurring",
-		    "D7; Pnts; 7; Melee - Damage: [(D8)] - Rush",
-		    "D8; Pnts; 5; Attack - Target 1 - Range +2 - Damage: Force + [D8]",
-		    "D9; Pnts; 5; Attack - Target 1 - Damage: Force + [D10]",
-		    "D10; Pnts; 6; Attack - Damage: 0 - Immobilize - Add 2 spray damage for each prep token discarded [D10]",
-		    "D11; Pnts; 6; Melee - Damage [D12] - Resistible + 2",
-		    "D12; Pnts; 8; Attack - Damage: [D12] + 2 - Immobile - Gain 1 Prep token"];
+		    "D1; Pnts; 6; Attack.  Targets 2.  Range 1.  Damage: Force + [D4]",
+		    "D2; Pnts; 3; 2 Spray Damage after standard attack.  Spray Range 1 [D4]",
+		    "D3; Pnts; 5; Attack. Damage: [D4].  Range 1. Rush",
+      	     	    "D4; Pnts; 4; Attack. Target 1. Range +2. Damage: Force + [D6]",
+		    "D5; Pnts; 6; Attack. Range +6. Damage: [(D6)]",
+		    "D6; Pnts; 3; Prep-Use 1 prep token to increase this figure’s force by 4 for it’s next attack. Recurring",
+		    "D7; Pnts; 7; Melee. Damage: [(D8)]. Rush",
+		    "D8; Pnts; 5; Attack. Target 1. Range +2. Damage: Force + [D8]",
+		    "D9; Pnts; 5; Attack. Target 1. Damage: Force + [D10]",
+		    "D10; Pnts; 6; Attack. Damage: 0. Immobilize. Add 2 spray damage for each prep token discarded. Remove[D10]",
+		    "D11; Pnts; 6; Melee. Damage [D12]. Resistible + 2",
+		    "D12; Pnts; 8; Attack. Damage: [D12] + 2. Immobile. Gain 1 Prep token"];
 
     var optionmd = ["Select Ability",
-		    ];
+		    "T1; Pnts; 6; Mine Active. Deploy within range 1. Damage: [D4]",
+		    "T2; Pnts; 2; Defend. Reduce attack damage by [(D4)] or [D4]",
+		    "T3; Pnts; 2; Target 1. push or pull another figure within range 2 [D4]",
+		    "T4; Pnts; 4; Mine Passive. Deploy base contact. Damage: [D6]",
+		    "T5; Pnts; 4; Target 1. push or pull another figure within range 2 [D6]. Resistible",
+		    "T6; Pnts; 8; Mine Active. Deploy base contact. Damage: [D8]",
+		    "T7; Pnts; 5; Defend. Reduce attack damage by [(D8)] or [D8]",
+		    "T8; Pnts; 6; Target 1. push or pull another figure within range by [D8]. Resistible",
+		    "T9; Pnts; 6; Mine Passive. Deploy base contact. Damage: [D10]",
+		    "T10; Pnts; 5; Reduce a [D10] by 2 then increase any other foraged die by 2. Recurring",
+		    "T11; Pnts; 7; Defend. Reduce attack damage by [(D12)] or [D12]",
+		    "T12; Pnts; 8; Remove 1 action from target figure. Range - 1. [5/6/7] Resistible",
+		    "T13; Pnts; 3; Sneak"];
     var optionlg = ["Select Ability",
-		    ];
-    var optionrn = ["Select Ability",   ]; 
+		    "L1; Pnts; 12; Attack. Target 3. Range + 1. Immobile. Form up to 3 attack dice pools with any foraged dice. Ignore foraged value and re-roll dice for each attack",
+		    "L2; Pnts; 10; Heal. Full Health. All [8/9/10]",
+		    "L3; Pnts; 10; Push or pull the gate by [D4] cm. All figures remain in their positions",
+    		    "L4; Pnts; 2; Defend. Reduce attack damage by [(D4)] or [D4]",
+		    "L5; Pnts; 10; Push or pull up to two figures by [D6] Resistible",
+		    "L6; Pnts; 4; [D6] Reduce a foraged D6 on this figure by 2. Increase any other die on any figure within range by 2. Recurring",
+		    "L7; Pnts; 4; If any friendly figure within this figure’s range takes damage then a [D8] may be reduced by any amount to negate the same amount of damage",
+		    "L8; Pnts; 5; Defend. Reduce attack damage by [(D8)] or [D8]",
+		    "L9; Pnts; 8; Give another figure that hasn’t been activated 1 additional action [5/8]",
+		    "L10; Pnts; 5; Start the game with two additional prep tokens",
+		    "L11; Pnts; 7; Whenever an opponent figure takes an attack action - at the end of that action this figure may be moved up to 4 cm",
+		    "L12; Pnts; 9; Attack. Damage: Force + [D12].  No defense abilities can be used against this attack"];
+
+    var optionrn = ["Select Ability", 
+		    "R1; Pnts; 2; Move. Movement + [D4]",
+		    "R2; Pnts; 3; Counter Attack [D4]. Perform this attack after this figure is not defeated by an opponents attack", 
+		    "R3; Pnts; 4; Melee. Damage: Take one prep token from opponent. Chain Rush. Resistable [D6]",
+		    "R4; Pnts; 3; Attack. Melee. Rush [(D6)]",
+		    "R5; Pnts; 4; Move. Movement + [D8]",
+		    "R6; Pnts; 5; Counter Attack. Damage: [D8]. Perform this attack after this figure is not defeated by an opponent's attack",
+		    "R7; Pnts; 7; Melee. Chain Rush. Damage: [(D8)]",
+		    "R8; Pnts; 6; Move. Movement + [D12]",
+		    "R9; Pnts; 6; Attack. Melee. Damage: [D12]",
+		    "R10; Pnts; 3; Sneak",
+		    "R11; Pnts; 2; Prep tokens spent to move this figure may move it 3cm instead of 2"];
+
 
     // start filling in drop down boxes ability 1
     var select = document.getElementById("ab1");
@@ -123,6 +159,7 @@ function abdrop(){
     	  var opt = optionsm[i];
     	  select.innerHTML += "<option value=\"" + opt + "\">" + opt + "</option>";
       }
+    }
     if (minisize == "run"){
       document.getElementById("bspoint").innerHTML = "10 - 25";
       for(var i = 0; i < optionrn.length; i++) {
@@ -157,6 +194,7 @@ function abdrop(){
     	  var opt = optionsm[i];
     	  select.innerHTML += "<option value=\"" + opt + "\">" + opt + "</option>";
       }
+    }
     if (minisize == "run"){
       document.getElementById("bspoint").innerHTML = "10 - 25";
       for(var i = 0; i < optionrn.length; i++) {
@@ -190,6 +228,7 @@ function abdrop(){
     	  var opt = optionsm[i];
     	  select.innerHTML += "<option value=\"" + opt + "\">" + opt + "</option>";
       }
+    }
     if (minisize == "run"){
       for(var i = 0; i < optionrn.length; i++) {
     	  var opt = optionrn[i];
@@ -209,6 +248,4 @@ function abdrop(){
       }
     }
    // end drop down boxes ability 3
-
-
 }
