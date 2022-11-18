@@ -3,26 +3,26 @@
  
 <head>
   <meta charset="utf-8">
-  <title id="unittab">Unit Set Builder</title>
+  <title id="unittab">Figure Set Builder</title>
   <link rel="stylesheet" href="styles.css">
 </head>
  
 <body onload="titleupdate()">
 
 <p>
-<label for="html">Figure Builder Wave 0.3</label>
+<label for="html">Figure Builder Wave 0.31</label>
 </p>
 
 <table class="table" >
   <tr>
     <td> <input type="button" value="Figure Points" id="btn" /> </td>
     <td> <input type="text" value="N/A" size="3" readonly="readonly" id="unittot1"/></td>
-    <td> <label for="html">Figure Name</label>
-    <td> <input type="text" value="Nameless" size="8" id="namebox" onChange="refresh()"/> </td>	  
+    <td> <input type="text" value="Figure Name..." size="25" id="namebox" onChange="refresh()"/> </td>	
   </tr>
+</table>
+<img src="boarder_red_1.png" alt="Red Boarder">
+<table>
   <tr>
-    <td> <label for="html">Base Diameter (mm)</label>
-    <td> <input type="text" value="0" size="5" id="basedia" onChange="refresh()"/> </td>
     <td> <label for="html">Class</label>
     <td> <select id="sizesel" name="sizesel" onChange="abdrop()">
                 <option value="size">Class</option>
@@ -30,37 +30,44 @@
   		<option value="tac">Tactician</option>
   		<option value="lea">Leader</option>
 	    	<option value="run">Runner</option>
-	  </select>
-    <td> <label for="space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label> 
+	  </select> 
   </tr>
 </table>
+<img src="boarder_red_1.png" alt="Red Boarder">
 
 <table class="table">
   <tr>
-    <td> <label for="html">Description</label>
-    <td> <input type="text" value="" size="37"/> </td>
+    <td> <input type="text" value="Figure Description" size="50"/> </td>
 </table>
 
-<table class="spectable">
+<img src="boarder_red_1.png" alt="Red Boarder">
+<br>
+<table>
   <tr>
-    <td> <label for="html">Hit Points</label>
-    <td> <input type="text" value="0" size="3" id="hp" onChange="refresh()"/> </td>
-    <td> <label for="space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
-    <td> <label for="html">Maximum Base Points</label>
+    <td><label for="html">Maximum Base Points</label></td>
+    <td><td> <label for="html" id=bspoint>Must Choose Unit Size</label></td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td> <img src="hit points icon.png" alt="Hit Points Icon">
+    <td> <input type="number" value="0" size="1" id="hp" min="0" max="30" onChange="refresh()"/> </td>
+    <td> <img src="move icon.png" alt="Movement Icon">
+    <td> <input type="number" value="0" size="1" id="mov" min="0" max="25" onChange="refresh()"/> </td>  
   </tr>
   <tr>
-    <td> <label for="html">Movement (x2cm)</label>
-    <td> <input type="text" value="0" size="3" id="mov" onChange="refresh()"/> </td>
-    <td> <label for="space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
-    <td> <label for="html" id=bspoint>Must Choose Unit Size</label>
+    <td> <img src="force icon.png" alt="Hit Points Icon">
+    <td> <input type="number" value="0" size="1" id="frc" min="0" max="25" onChange="refresh()"/> </td>
+    <td> <img src="range icon.png" alt="Range Icon">
+    <td> <input type="number" value="0" size="1" id="rng" min="0" max="8" onChange="refresh()"/> </td>
   </tr>
+</table>
+<br>
+<table>
   <tr>
-    <td> <label for="html">Force</label>
-    <td> <input type="text" value="0" size="3" id="frc" onChange="refresh()"/> </td>
-  </tr>
-  <tr>
-    <td> <label for="html">Range (x5cm)</label>
-    <td> <input type="text" value="0" size="3" id="rng" onChange="refresh()"/> </td>
+    <td> <label for="html">Base Diameter (mm)</label>
+    <td> <input type="text" value="0" size="5" id="basedia" onChange="refresh()"/> </td>
   </tr>
 </table>
 

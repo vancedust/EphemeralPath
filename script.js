@@ -21,7 +21,8 @@ function titleupdate(){
     var tit = document.getElementById("namebox").value +"-"+ document.getElementById("unittot1").value;
     //document.getElementById("unittab").value = tit
     document.title=tit
-    }
+}
+
 
 function statimgupdate(){
     var bck = document.querySelector(':root');
@@ -36,6 +37,7 @@ function statimgupdate(){
     var basesum = document.getElementById("unittot1").value;
     var minisize = document.getElementById("sizesel").value;
     var basedim = document.getElementById("basedia").value;
+    var basepnt = hp_i+mov_i+frc_i+rng_i;
     var actnum = 3
     if (minisize == "lea"){
       actnum = 2;
@@ -45,6 +47,31 @@ function statimgupdate(){
     }
     var imname = 'url("backa' + actnum + 'h' + hp_i +'.png")'
     bck.style.setProperty('--statimg', imname);
+
+    var minisize = document.getElementById("sizesel").value
+    if (minisize == "dis"){
+      var minbase = 10;
+      var maxbase = 25;
+    }
+    if (minisize == "run"){
+      var minbase = 10;
+      var maxbase = 25;
+    }
+    if (minisize == "tac"){
+      var minbase = 15;
+      var maxbase = 30;
+    }
+    if (minisize == "lea"){
+      var minbase = 20;
+      var maxbase = 35;
+    }
+    if (basepnt < minbase){
+      bck.style.setProperty('--statimg', "url('Inv-base.png')");
+    }
+    if (basepnt > maxbase){
+      bck.style.setProperty('--statimg', "url('Inv-base.png')");
+    }
+
 }
 
 //Refresh a unit's points
@@ -129,7 +156,7 @@ function abdrop(){
 		    "L6; Pnts; 4; [D6] Reduce a foraged D6 on this figure by 2. Increase any other die on any figure within range by 2. Recurring",
 		    "L7; Pnts; 4; If any friendly figure within this figure’s range takes damage then a [D8] may be reduced by any amount to negate the same amount of damage",
 		    "L8; Pnts; 5; Defend. Reduce attack damage by [(D8)] or [D8]",
-		    "L9; Pnts; 8; Give another figure that hasn’t been activated 1 additional action [5/8]",
+		    "L9; Pnts; 8; Give another figure that hasn’t been activated 1 additional action. Rush [5/8]",
 		    "L10; Pnts; 5; Start the game with two additional prep tokens",
 		    "L11; Pnts; 7; Whenever an opponent figure takes an attack action - at the end of that action this figure may be moved up to 4 cm",
 		    "L12; Pnts; 9; Attack. Damage: Force + [D12].  No defense abilities can be used against this attack"];
@@ -155,6 +182,8 @@ function abdrop(){
     select.innerHTML = "";
     if (minisize == "dis"){
       document.getElementById("bspoint").innerHTML = "10 - 25";
+      var minbase = 10;
+      var maxbase = 25;
       for(var i = 0; i < optionsm.length; i++) {
     	  var opt = optionsm[i];
     	  select.innerHTML += "<option value=\"" + opt + "\">" + opt + "</option>";
@@ -248,4 +277,5 @@ function abdrop(){
       }
     }
    // end drop down boxes ability 3
+   refresh(minbase, maxbase);
 }
