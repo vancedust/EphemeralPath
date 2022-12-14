@@ -5,11 +5,11 @@
 }
 
 #btn {
-    background-color: #fb0066;
+    background-color: #b90d08ff;
 }
 input[type=button] {
     font-family: 'Orbitron', sans-serif;
-    background-color: #64278f;
+    background-color: #b90d08ff;
     color: white;
     border: solid black 0.5px;
     width: 100%;

@@ -36,15 +36,15 @@ function statimgupdate(){
     var rng_i = parseInt(rng_s);
     var basesum = document.getElementById("unittot1").value;
     var minisize = document.getElementById("sizesel").value;
-    var basedim = document.getElementById("basedia").value;
+    //var basedim = document.getElementById("basedia").value;
     var basepnt = hp_i+mov_i+frc_i+rng_i;
     var actnum = 3
     if (minisize == "lea"){
       actnum = 2;
     }
-    if (basedim > 55){
-      actnum = 2;
-    }
+    //if (basedim > 55){
+      //actnum = 2;
+    //}
     var imname = 'url("backa' + actnum + 'h' + hp_i +'.png")'
     bck.style.setProperty('--statimg', imname);
 
@@ -109,8 +109,51 @@ function abpnts(id){
     var abpoints = pntsarray[2];
     document.getElementById(textname).value = abpoints;
     refresh()
+    
 }
 
+function cardchange(id){
+    var pstring = document.getElementById(id).value;
+    var backname = id + "img";
+    var cardname = id + "over";
+    if (pstring == "Select Ability"){
+        document.getElementById(backname).src = "Select Abilitycard.png";
+	document.getElementById(cardname).src = "blank_card.png";
+	return
+    }
+    var cardarray = pstring.split(';');
+    var cardnum = cardarray[0];
+    var cardsrc = cardnum + "card.png";
+    document.getElementById(cardname).src = cardsrc;
+
+    var backstring = cardarray[3];
+    if (backstring.includes("Attack.")){
+      document.getElementById(backname).src = "attack_card_template.png";
+      return
+    }
+    if (backstring.includes("Melee.")){
+      document.getElementById(backname).src = "attack_card_template.png";
+      return
+    }
+    if (backstring.includes("Mine Active.")){
+      document.getElementById(backname).src = "mine_card_template.png";
+      return
+    }
+    if (backstring.includes("Mine Passive.")){
+      document.getElementById(backname).src = "mine_card_template.png";
+      return
+    }
+    if (backstring.includes("Defend.")){
+      document.getElementById(backname).src = "defense_card_template.png";
+      return
+    }
+    if (backstring.includes("Move.")){
+      document.getElementById(backname).src = "move_card_template.png";
+      return
+    }
+    document.getElementById(backname).src = "misc_card_template.png";
+    
+}
 
 
 //Sets ability drop downs by units
@@ -121,7 +164,7 @@ function abdrop(){
     document.getElementById("ab3pnts").value = 0
     var optionsm = ["Select Ability",
 		    "D1; Pnts; 6; Attack.  Targets 2.  Range 1.  Damage: Force + [D4]",
-		    "D2; Pnts; 3; 2 Spray Damage after standard attack.  Spray Range 1 [D4]",
+		    "D2; Pnts; 3; 2 Spray Damage after standard attack.  Spray Range 1 [D4] Ref",
 		    "D3; Pnts; 5; Attack. Damage: [D4].  Range 1. Rush",
       	     	    "D4; Pnts; 4; Attack. Target 1. Range +2. Damage: Force + [D6]",
 		    "D5; Pnts; 6; Attack. Range +6. Damage: [(D6)]",
@@ -134,29 +177,30 @@ function abdrop(){
 		    "D12; Pnts; 8; Attack. Damage: [D12] + 2. Immobile. Gain 1 Prep token"];
 
     var optionmd = ["Select Ability",
-		    "T1; Pnts; 6; Mine Active. Deploy within range 1. Damage: [D4]",
-		    "T2; Pnts; 2; Defend. Reduce attack damage by [(D4)] or [D4]",
+		    "T1; Pnts; 3; Mine Active. Deploy within range 1. Damage: [D4]",
+		    "T2; Pnts; 2; Defend. Reduce attack damage by [(D4)] or [D4] Limit 1",
 		    "T3; Pnts; 2; Target 1. push or pull another figure within range 2 [D4]",
 		    "T4; Pnts; 4; Mine Passive. Deploy base contact. Damage: [D6]",
 		    "T5; Pnts; 4; Target 1. push or pull another figure within range 2 [D6]. Resistible",
-		    "T6; Pnts; 8; Mine Active. Deploy base contact. Damage: [D8]",
-		    "T7; Pnts; 5; Defend. Reduce attack damage by [(D8)] or [D8]",
+		    "T6; Pnts; 5; Mine Active. Deploy base contact. Damage: [D8]",
+		    "T7; Pnts; 5; Defend. Reduce attack damage by [(D8)] or [D8] Limit 1",
 		    "T8; Pnts; 6; Target 1. push or pull another figure within range by [D8]. Resistible",
 		    "T9; Pnts; 6; Mine Passive. Deploy base contact. Damage: [D10]",
 		    "T10; Pnts; 5; Reduce a [D10] by 2 then increase any other foraged die by 2. Recurring",
-		    "T11; Pnts; 7; Defend. Reduce attack damage by [(D12)] or [D12]",
-		    "T12; Pnts; 8; Remove 1 action from target figure. Range - 1. [5/6/7] Resistible",
+		    "T11; Pnts; 7; Defend. Reduce attack damage by [(D12)] or [D12] Limit 1",
+		    "T12; Pnts; 8; Remove 1 action from target figure. Range - 1. [5/6/7] Resistible. Limit 1",
 		    "T13; Pnts; 3; Sneak"];
+
     var optionlg = ["Select Ability",
 		    "L1; Pnts; 12; Attack. Target 3. Range + 1. Immobile. Form up to 3 attack dice pools with any foraged dice. Ignore foraged value and re-roll dice for each attack",
 		    "L2; Pnts; 10; Heal. Full Health. All [8/9/10]",
-		    "L3; Pnts; 10; Push or pull the gate by [D4] cm. All figures remain in their positions",
-    		    "L4; Pnts; 2; Defend. Reduce attack damage by [(D4)] or [D4]",
-		    "L5; Pnts; 10; Push or pull up to two figures by [D6] Resistible",
-		    "L6; Pnts; 4; [D6] Reduce a foraged D6 on this figure by 2. Increase any other die on any figure within range by 2. Recurring",
+		    "L3; Pnts; 10; Push or pull the gate by [D4] cm. Ref",
+    		    "L4; Pnts; 2; Defend. Reduce attack damage by [(D4)] or [D4] Limit 1",
+		    "L5; Pnts; 10; Push or pull up to two figures within range by [D6] Resistible",
+		    "L6; Pnts; 4; [D6] Reduce a foraged D6 on this figure by 2. Increase any other foraged die by 2. Recurring",
 		    "L7; Pnts; 4; If any friendly figure within this figure’s range takes damage then a [D8] may be reduced by any amount to negate the same amount of damage",
-		    "L8; Pnts; 5; Defend. Reduce attack damage by [(D8)] or [D8]",
-		    "L9; Pnts; 8; Give another figure that hasn’t been activated 1 additional action. Rush [5/8]",
+		    "L8; Pnts; 5; Defend. Reduce attack damage by [(D8)] or [D8] Limit 1",
+		    "L9; Pnts; 8; Give another figure that hasn’t been activated 1 additional action. Rush [5/8] Limit 1",
 		    "L10; Pnts; 5; Start the game with two additional prep tokens",
 		    "L11; Pnts; 7; Whenever an opponent figure takes an attack action - at the end of that action this figure may be moved up to 4 cm",
 		    "L12; Pnts; 9; Attack. Damage: Force + [D12].  No defense abilities can be used against this attack"];
