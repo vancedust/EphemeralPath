@@ -158,6 +158,12 @@ function cardchange(id){
 
 //Sets ability drop downs by units
 function abdrop(){
+    document.getElementById("ab1img").src = "Select Abilitycard.png";
+    document.getElementById("ab1over").src = "blank_card.png";
+    document.getElementById("ab2img").src = "Select Abilitycard.png";
+    document.getElementById("ab2over").src = "blank_card.png";
+    document.getElementById("ab3img").src = "Select Abilitycard.png";
+    document.getElementById("ab3over").src = "blank_card.png";
     statimgupdate()
     document.getElementById("ab1pnts").value = 0
     document.getElementById("ab2pnts").value = 0
@@ -322,4 +328,6 @@ function abdrop(){
     }
    // end drop down boxes ability 3
    refresh(minbase, maxbase);
+
+   
 }
