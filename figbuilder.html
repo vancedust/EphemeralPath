@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ 
+<head>
+  <meta charset="utf-8">
+  <title id="unittab">Figure Set Builder</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+ 
+<body onload="titleupdate()">
+
+<p>
+<label for="html">Figure Builder Wave 0.32</label>
+</p>
+
+<table class="table" >
+  <tr>
+    <td> <input type="button" value="Figure Points" id="btn" /> </td>
+    <td> <input type="text" value="N/A" size="3" readonly="readonly" id="unittot1"/></td>
+    <td> <input type="text" value="Figure Name..." size="25" id="namebox" onChange="refresh()"/> </td>	
+  </tr>
+</table>
+<img src="boarder_red_1.png" alt="Red Boarder">
+<table>
+  <tr>
+    <td> <label for="html">Class</label>
+    <td> <select id="sizesel" name="sizesel" onChange="abdrop()">
+                <option value="size">Class</option>
+  		<option value="dis">Disruptor</option>
+  		<option value="tac">Tactician</option>
+  		<option value="lea">Leader</option>
+	    	<option value="run">Runner</option>
+	  </select> 
+  </tr>
+</table>
+<img src="boarder_red_1.png" alt="Red Boarder">
+
+<table class="table">
+  <tr>
+    <td> <input type="text" value="Figure Description" size="50"/> </td>
+</table>
+
+<img src="boarder_red_1.png" alt="Red Boarder">
+<br>
+<table>
+  <tr>
+    <td><label for="html">Base Points Range</label></td>
+    <td><td> <label for="html" id=bspoint>Must Choose Figure Class</label></td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td> <img src="hit_points_icon.png" alt="Hit Points Icon">
+    <td> <input type="number" value="0" size="1" id="hp" min="0" max="30" onChange="refresh()"/> </td>
+    <td> <img src="move_icon.png" alt="Movement Icon">
+    <td> <input type="number" value="0" size="1" id="mov" min="0" max="25" onChange="refresh()"/> </td>  
+  </tr>
+  <tr>
+    <td> <img src="force_icon.png" alt="Hit Points Icon">
+    <td> <input type="number" value="0" size="1" id="frc" min="0" max="25" onChange="refresh()"/> </td>
+    <td> <img src="range_icon.png" alt="Range Icon">
+    <td> <input type="number" value="0" size="1" id="rng" min="0" max="8" onChange="refresh()"/> </td>
+  </tr>
+</table>
+
+<br>
+</br>
+
+
+<div style="width: 420px; float:left;">
+<table class="spectable">
+  <tr>
+    <td> <label for="html"><strong>Ability 1</strong></label> </td>
+    <td> <input type="text" value="Name..." size="10" id="ab1name"</td>
+    <td> <input type="text" value="0" size="3" id="ab1pnts" readonly="readonly"</td>
+    <td> <label for="html">Points</label> </td>
+  </tr>
+</table>
+
+<select name="ab1" id="ab1" onChange="abpnts(id); cardchange(id);" style="width:390px">
+	  </select> 
+
+<br>
+</br>
+
+<table class="spectable">
+  <tr>
+    <td> <label for="html"><strong>Ability 2</strong></label></td>
+    <td> <input type="text" value="Name..." size="10" id="ab2name"</td>
+    <td> <input type="text" value="0" size="3" id="ab2pnts" readonly="readonly"</td>
+    <td> <label for="html">Points</label></td>
+  </tr>
+</table>
+
+<select name="ab2" id="ab2" onChange="abpnts(id); cardchange(id);" style="width:390px">
+	  </select>
+
+<br>
+</br>
+
+<table class="spectable">
+  <tr>
+    <td> <label for="html"><strong>Ability 3</strong></label> </td>
+    <td> <input type="text" value="Name..." size="10" id="ab3name"</td>
+    <td> <input type="text" value="0" size="3" id="ab3pnts" readonly="readonly"</td>
+    <td> <label for="html">Points</label></td>
+  </tr>
+</table>
+
+<select name="ab3" id="ab3" onChange="abpnts(id); cardchange(id);" style="width:390px">
+	  </select> 
+</div>
+
+<div style="position: absolute; top: 370px; left: 400px; padding-left: 5px">  
+  <img id="ab1img" src="Select Abilitycard.png" alt="Ability 1 Card">
+</div>
+
+<!Blank Card>
+<div style="position: absolute; top: 370px; left: 400px; padding-left: 5px">  
+  <img id="ab1over" src="blank_card.png" alt="Ability 1 Over Card">
+</div>
+
+<div style="position: absolute; top: 370px; left: 560px; padding-left: 5px">  
+  <img id="ab2img" src="Select Abilitycard.png" alt="Ability 2 Card">
+</div>
+
+<!Blank Card>
+<div style="position: absolute; top: 370px; left: 560px; padding-left: 5px">  
+  <img id="ab2over" src="blank_card.png" alt="Ability 2 Over Card">
+</div>
+
+<div style="position: absolute; top: 370px; left: 720px; padding-left: 5px">  
+  <img id="ab3img" src="Select Abilitycard.png" alt="Ability 3 Card">
+</div>
+
+<!Blank Card>
+<div style="position: absolute; top: 370px; left: 720px; padding-left: 5px">  
+  <img id="ab3over" src="blank_card.png" alt="Ability 3 Over Card">
+</div>
+
+<div style="position: absolute; top: 580px; left: 0 padding-left: 5px">
+<p>
+<label>Key: [DX] = Foraged Die,  (DX) = Rolled Die,  [(DX)] = Foraged and Rolled Die, [X] = Any Foraged Die of That Value </label>;
+</p>
+<p>
+<a href="index.html" rel="noopener noreferrer" target="_blank">Add figure on new tab</a>
+</p>
+<script type="text/javascript" src="script.js"></script>
+<p>
+Troubleshooting: Microsoft Edge browser is not currently supported.
+<br>
+If hit point and action icons are not displaying during print then
+ensure the your print settings are set to print background graphics.
+</p>
+</body>
+
+</div>
+ 
+</html>
