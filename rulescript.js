@@ -5,7 +5,7 @@ function discord() {
 
 // This function creates a new email
 function email() {
-    window.open('mailto:ephemeralgate@gmail.com');
+    window.open('mailto:vancedust@gmail.com');
 }
 
 // This function goes to rules page
@@ -25,10 +25,10 @@ function fig_link() {
 
 // This function downloads rules
 function ruledwn() {
-    window.open("ephemeral gate rules of play v0.20.pdf");
+    window.open("ephemeral path rules of play v0.21.pdf");
 }
 
 // This function downloads rules
 function abdwn() {
-    window.open("ephemeral gate ability guide w0.32.pdf");
+    window.open("ephemeral path ability guide w0.32.pdf");
 }
