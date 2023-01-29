@@ -23,6 +23,11 @@ function fig_link() {
     window.open("figbuilder.html", "_blank");
 }
 
+// This function goes to resources page
+function resource_link() {
+    window.open("resource.html", "_blank");
+}
+
 // This function downloads rules
 function ruledwn() {
     window.open("ephemeral path rules of play v0.21.pdf");
@@ -30,5 +35,5 @@ function ruledwn() {
 
 // This function downloads rules
 function abdwn() {
-    window.open("ephemeral path ability guide w0.32.pdf");
+    window.open("ephemeral path ability guide w0.33.pdf");
 }
