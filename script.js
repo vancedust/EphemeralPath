@@ -71,6 +71,9 @@ function statimgupdate(){
     if (basepnt > maxbase){
       bck.style.setProperty('--statimg', "url('Inv-base.png')");
     }
+    if (minisize == "size"){
+      bck.style.setProperty('--statimg', "url('Inv-base.png')");
+    }
 
 }
 
@@ -183,14 +186,14 @@ function abdrop(){
 		    "D12; Pnts; 8; Attack. Damage: [D12] + 2. Immobile. Gain 1 Prep token"];
 
     var optionmd = ["Select Ability",
-		    "T1; Pnts; 3; Mine Active. Deploy within range 1. Damage: [D4]",
+		    "T1; Pnts; 3; Mine Active. Deploy within range 1. Damage: [D4]. Rush",
 		    "T2; Pnts; 2; Defend. Reduce attack damage by [(D4)] or [D4] Limit 1",
 		    "T3; Pnts; 2; Target 1. push or pull another figure within range 2 [D4]",
 		    "T4; Pnts; 4; Mine Passive. Deploy base contact. Damage: [D6]",
-		    "T5; Pnts; 4; Target 1. push or pull another figure within range 2 [D6]. Resistible",
-		    "T6; Pnts; 5; Mine Active. Deploy base contact. Damage: [D8]",
+		    "T5; Pnts; 4; Target 1. push or pull another figure within range 2 [D6].",
+		    "T6; Pnts; 5; Mine Active. Deploy base contact. Damage: [D8]. Rush",
 		    "T7; Pnts; 5; Defend. Reduce attack damage by [(D8)] or [D8] Limit 1",
-		    "T8; Pnts; 6; Target 1. push or pull another figure within range by [D8]. Resistible",
+		    "T8; Pnts; 6; Target 1. push or pull another figure within range by [D8].",
 		    "T9; Pnts; 6; Mine Passive. Deploy base contact. Damage: [D10]",
 		    "T10; Pnts; 5; Reduce a [D10] by 2 then increase any other foraged die by 2. Recurring",
 		    "T11; Pnts; 7; Defend. Reduce attack damage by [(D12)] or [D12] Limit 1",
@@ -202,7 +205,7 @@ function abdrop(){
 		    "L2; Pnts; 10; Heal. Full Health. All [8/9/10]",
 		    "L3; Pnts; 10; Push or pull the gate by [D4] cm. Ref",
     		    "L4; Pnts; 2; Defend. Reduce attack damage by [(D4)] or [D4] Limit 1",
-		    "L5; Pnts; 10; Push or pull up to two figures within range by [D6] Resistible",
+		    "L5; Pnts; 10; Push or pull up to two figures within range by [D6]",
 		    "L6; Pnts; 4; [D6] Reduce a foraged D6 on this figure by 2. Increase any other foraged die by 2. Recurring",
 		    "L7; Pnts; 4; If any friendly figure within this figure’s range takes damage then a [D8] may be reduced by any amount to negate the same amount of damage",
 		    "L8; Pnts; 5; Defend. Reduce attack damage by [(D8)] or [D8] Limit 1",
@@ -214,7 +217,7 @@ function abdrop(){
     var optionrn = ["Select Ability", 
 		    "R1; Pnts; 2; Move. Movement + [D4]",
 		    "R2; Pnts; 3; Counter Attack [D4]. Perform this attack after this figure is not defeated by an opponents attack", 
-		    "R3; Pnts; 4; Melee. Damage: Take one prep token from opponent. Chain Rush. Resistable [D6]",
+		    "R3; Pnts; 2; Melee. Damage: Take one prep token from opponent. Chain Rush. Remove[D6]",
 		    "R4; Pnts; 3; Attack. Melee. Rush [(D6)]",
 		    "R5; Pnts; 4; Move. Movement + [D8]",
 		    "R6; Pnts; 5; Counter Attack. Damage: [D8]. Perform this attack after this figure is not defeated by an opponent's attack",
