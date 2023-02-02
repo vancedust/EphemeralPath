@@ -94,8 +94,14 @@ function refresh(){
     var ab2_i = parseInt(ab2_s);
     var ab3_s = document.getElementById("ab3pnts").value;
     var ab3_i = parseInt(ab3_s);
+    var uclassl = document.getElementById("uclass").value;
     unitpnt = hp_i+mov_i+frc_i+rng_i+ab1_i+ab2_i+ab3_i;
     document.getElementById("unittot1").value = unitpnt;
+    if (ab1_s == ab2_s && ab2_s == ab3_s){
+      document.getElementById("uclass").innerHTML = "unclassed";
+    } else {
+      document.getElementById("uclass").innerHTML = " ";
+    }
     titleupdate()
     statimgupdate()
 }
