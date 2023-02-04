@@ -30,7 +30,7 @@ function resource_link() {
 
 // This function downloads rules
 function ruledwn() {
-    window.open("ephemeral path rules of play v0.21.pdf");
+    window.open("ephemeral path rules of play v0.22.pdf");
 }
 
 // This function downloads rules
