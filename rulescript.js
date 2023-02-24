@@ -37,3 +37,8 @@ function ruledwn() {
 function abdwn() {
     window.open("ephemeral path ability guide w0.33.pdf");
 }
+
+// This function downloads organized play guide
+function opdwn() {
+    window.open("ephemeral_path_organized_play_guide_v0.1.pdf");
+}
