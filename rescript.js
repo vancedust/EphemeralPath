@@ -5,7 +5,7 @@ function discord() {
 
 // This function creates a new email
 function email() {
-    window.open('mailto:vancedust@gmail.com');
+    window.open('mailto:ephemeralpath@gmail.com');
 }
 
 // This function goes to rules page
