@@ -8,9 +8,7 @@ h1 {
 }
 
 .footer {
-   position:absolute;
-   top:1350px;
-   left: 0px;
+   position: absolute;
    width: 100%;
    background-color: rgb(26, 26, 26);
    color: white;
@@ -26,7 +24,6 @@ p{
 }
 
 body {
-   min-height: 1050px;
    margin-bottom: 100px;
    clear: both;
 }
