@@ -207,7 +207,7 @@ function abdrop(){
 		    "T13; Pnts; 3; Sneak"];
 
     var optionlg = ["Select Ability",
-		    "L1; Pnts; 12; Attack. Target 3. Range + 1. Immobile. Form up to 3 attack dice pools with any foraged dice. Ignore foraged value and re-roll dice for each attack",
+		    "L1; Pnts; 12; Attack. Target 3. Range + 1. Form up to 3 attack dice pools with any foraged dice. Ignore foraged value and re-roll dice for each attack. Immobile. Limit 1.",
 		    "L2; Pnts; 10; Heal. Full Health. All [8/9/10]",
 		    "L3; Pnts; 10; Push or pull the gate by [D4] cm. Ref",
     		    "L4; Pnts; 2; Defend. Reduce attack damage by [(D4)] or [D4] Limit 1",
@@ -217,7 +217,7 @@ function abdrop(){
 		    "L8; Pnts; 5; Defend. Reduce attack damage by [(D8)] or [D8] Limit 1",
 		    "L9; Pnts; 8; Give another figure that hasn’t been activated 1 additional action. Rush [5/8] Limit 1",
 		    "L10; Pnts; 5; Start the game with two additional prep tokens",
-		    "L11; Pnts; 7; Whenever an opponent figure takes an attack action - at the end of that action this figure may be moved up to 4 cm",
+		    "L11; Pnts; 7; Whenever an opponent figure takes an attack action or uses an attack ability - at the end of that action this figure may be moved up to 4 cm",
 		    "L12; Pnts; 9; Attack. Damage: Force + [D12].  No defense abilities can be used against this attack"];
 
     var optionrn = ["Select Ability", 
