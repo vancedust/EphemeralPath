@@ -8,6 +8,16 @@ function email() {
     window.open('mailto:ephemeralpath@gmail.com');
 }
 
+// This function creates a new tab with BGG link
+function bgg() {
+    window.open("https://boardgamegeek.com/boardgame/382658/ephemeral-path", "_blank");
+}
+
+// This function creates a new tab with instagram link
+function insta() {
+    window.open("https://www.instagram.com/ephemeralpath/", "_blank");
+}
+
 // This function goes to rules page
 function rule_link() {
     window.open("rules.html", "_self");
