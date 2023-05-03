@@ -104,6 +104,14 @@ function refresh(){
     }
     titleupdate()
     statimgupdate()
+    var rngcm_s = document.getElementById("rngcm").value;
+    var movcm_s = document.getElementById("movcm").value;
+    var rngcm_i = parseInt(rngcm_s);
+    var movcm_i = parseInt(movcm_s);
+    rngcm_i = rng_i*5
+    movcm_i = mov_i*2
+    document.getElementById("rngcm").value = rngcm_i
+    document.getElementById("movcm").value = movcm_i
 }
 
 function abpnts(id){
@@ -338,5 +346,81 @@ function abdrop(){
    // end drop down boxes ability 3
    refresh(minbase, maxbase);
 
-   
+
+}
+
+//Sets ability drop downs by units
+function prnt_view(){
+    if (document.getElementById("print_chk").checked == true) {
+      document.getElementById('ab1name').hidden = true
+      document.getElementById('ab1pnts').hidden = true
+      document.getElementById('ab1').hidden = true
+      document.getElementById('l11').hidden = true
+      document.getElementById('l12').hidden = true
+      document.getElementById('l09').hidden = true
+      document.getElementById('l10').hidden = true
+      document.getElementById('ab2name').hidden = true
+      document.getElementById('ab2pnts').hidden = true
+      document.getElementById('ab2').hidden = true
+      document.getElementById('ab3name').hidden = true
+      document.getElementById('ab3pnts').hidden = true
+      document.getElementById('ab3').hidden = true
+      document.getElementById('l13').hidden = true
+      document.getElementById('l14').hidden = true
+      document.getElementById('ltrb').hidden = true
+      document.getElementById('lgrnd1').hidden = true
+      document.getElementById('lgrnd2').hidden = true
+      document.getElementById('lkey').hidden = true
+      document.getElementById('spec_pnt').hidden = true
+      document.getElementById('bslbl').hidden = true
+      document.getElementById('bspoint').hidden = true
+      document.getElementById('mov').hidden = true
+      document.getElementById('rng').hidden = true
+      if (document.getElementById('ab1name').value != "Name..."){
+        document.getElementById('ab1namelbl').hidden = false
+        ab1switch = document.getElementById('ab1name').value
+        document.getElementById('ab1namelbl').innerHTML = ab1switch
+      }
+      if (document.getElementById('ab2name').value != "Name..."){
+        document.getElementById('ab2namelbl').hidden = false
+        ab2switch = document.getElementById('ab2name').value
+        document.getElementById('ab2namelbl').innerHTML = ab2switch
+      }
+      if (document.getElementById('ab3name').value != "Name..."){
+        document.getElementById('ab3namelbl').hidden = false
+        ab3switch = document.getElementById('ab3name').value
+        document.getElementById('ab3namelbl').innerHTML = ab3switch
+      }
+
+    }
+    if (document.getElementById("print_chk").checked == false) {
+      document.getElementById('ab1name').hidden = false
+      document.getElementById('ab1pnts').hidden = false
+      document.getElementById('ab1').hidden = false
+      document.getElementById('l11').hidden = false
+      document.getElementById('l12').hidden = false
+      document.getElementById('l09').hidden = false
+      document.getElementById('l10').hidden = false
+      document.getElementById('ab2name').hidden = false
+      document.getElementById('ab2pnts').hidden = false
+      document.getElementById('ab2').hidden = false
+      document.getElementById('ab3name').hidden = false
+      document.getElementById('ab3pnts').hidden = false
+      document.getElementById('ab3').hidden = false
+      document.getElementById('l13').hidden = false
+      document.getElementById('l14').hidden = false
+      document.getElementById('ltrb').hidden = false
+      document.getElementById('lgrnd1').hidden = false
+      document.getElementById('lgrnd2').hidden = false
+      document.getElementById('lkey').hidden = false  
+      document.getElementById('ab1namelbl').hidden = true 
+      document.getElementById('ab2namelbl').hidden = true
+      document.getElementById('ab3namelbl').hidden = true
+      document.getElementById('bslbl').hidden = false
+      document.getElementById('bspoint').hidden = false
+      document.getElementById('spec_pnt').hidden = false
+      document.getElementById('mov').hidden = false
+      document.getElementById('rng').hidden = false
+
+    }
 }
