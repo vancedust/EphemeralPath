@@ -38,6 +38,17 @@ body {
     width: 75px;
 }
 
+.input_large_2{
+    font-family: arial;
+    font-size: 40px;
+    color: black;
+    border: solid black 0px;
+    width: 100%;
+    border-radius: 0px;
+    outline: none;
+    width: 45px;
+}
+
 .input_small{
     font-family: arial;
     font-size: 20px;

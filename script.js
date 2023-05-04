@@ -371,7 +371,7 @@ function prnt_view(){
       document.getElementById('lgrnd1').hidden = true
       document.getElementById('lgrnd2').hidden = true
       document.getElementById('lkey').hidden = true
-      document.getElementById('spec_pnt').hidden = true
+      //document.getElementById('spec_pnt').hidden = true
       document.getElementById('bslbl').hidden = true
       document.getElementById('bspoint').hidden = true
       document.getElementById('mov').hidden = true
@@ -418,7 +418,7 @@ function prnt_view(){
       document.getElementById('ab3namelbl').hidden = true
       document.getElementById('bslbl').hidden = false
       document.getElementById('bspoint').hidden = false
-      document.getElementById('spec_pnt').hidden = false
+      //document.getElementById('spec_pnt').hidden = false
       document.getElementById('mov').hidden = false
       document.getElementById('rng').hidden = false
 
