@@ -186,25 +186,25 @@ function abdrop(){
     document.getElementById("ab2pnts").value = 0
     document.getElementById("ab3pnts").value = 0
     var optionsm = ["Select Ability",
-		    "D1; Pnts; 6; Attack.  Targets 2.  Range 1.  Damage: Force + [D4]",
-		    "D2; Pnts; 3; 2 Spray Damage after standard attack.  Spray Range 1 [D4] Ref",
-		    "D3; Pnts; 5; Attack. Damage: [D4].  Range 1. Rush",
-      	     	    "D4; Pnts; 4; Attack. Target 1. Range +2. Damage: Force + [D6]",
-		    "D5; Pnts; 6; Attack. Range +6. Damage: [(D6)]",
+		    "D1; Pnts; 6; Attack.  Targets 2.  Range 5cm.  Damage: Force + [D4]",
+		    "D2; Pnts; 3; 2 Spray Damage after standard attack.  Spray Range 5cm [D4] Ref",
+		    "D3; Pnts; 5; Attack. Damage: [D4].  Range 5cm. Rush",
+      	     	    "D4; Pnts; 4; Attack. Target 1. Range +10cm. Damage: Force + [D6]",
+		    "D5; Pnts; 6; Attack. Range +30cm. Damage: [(D6)]",
 		    "D6; Pnts; 3; Prep-Use 1 prep token to increase this figure’s force by 4 for it’s next attack. Recurring",
 		    "D7; Pnts; 7; Melee. Damage: [(D8)]. Rush",
-		    "D8; Pnts; 5; Attack. Target 1. Range +2. Damage: Force + [D8]",
+		    "D8; Pnts; 5; Attack. Target 1. Range +10cm. Damage: Force + [D8]",
 		    "D9; Pnts; 5; Attack. Target 1. Damage: Force + [D10]",
 		    "D10; Pnts; 6; Attack. Damage: 0. Immobilize. Add 2 spray damage for each prep token discarded. Remove[D10]",
 		    "D11; Pnts; 6; Melee. Damage [D12]. Resistible + 2",
 		    "D12; Pnts; 8; Attack. Damage: [D12] + 2. Immobile. Gain 1 Prep token"];
 
     var optionmd = ["Select Ability",
-		    "T1; Pnts; 3; Mine Active. Deploy within range 1. Damage: [D4]. Rush",
+		    "T1; Pnts; 3; Mine Active. Deploy within 5cm range. Damage: [D4]. Rush",
 		    "T2; Pnts; 2; Defend. Reduce attack damage by [(D4)] or [D4] Limit 1",
-		    "T3; Pnts; 2; Target 1. push or pull another figure within range 2 [D4]",
+		    "T3; Pnts; 2; Target 1. push or pull another figure within 10cm range [D4]",
 		    "T4; Pnts; 4; Mine Passive. Deploy base contact. Damage: [D6]",
-		    "T5; Pnts; 4; Target 1. push or pull another figure within range 2 [D6].",
+		    "T5; Pnts; 4; Target 1. push or pull another figure within 10cm range [D6].",
 		    "T6; Pnts; 5; Mine Active. Deploy base contact. Damage: [D8]. Rush",
 		    "T7; Pnts; 5; Defend. Reduce attack damage by [(D8)] or [D8] Limit 1",
 		    "T8; Pnts; 6; Target 1. push or pull another figure within range by [D8].",
@@ -215,7 +215,7 @@ function abdrop(){
 		    "T13; Pnts; 3; Sneak"];
 
     var optionlg = ["Select Ability",
-		    "L1; Pnts; 12; Attack. Target 3. Range + 1. Form up to 3 attack dice pools with any foraged dice. Ignore foraged value and re-roll dice for each attack. Immobile. Limit 1.",
+		    "L1; Pnts; 12; Attack. Target 3. Range +5cm. Form up to 3 attack dice pools with any foraged dice. Ignore foraged value and re-roll dice for each attack. Immobile. Limit 1.",
 		    "L2; Pnts; 10; Heal. Full Health. All [8/9/10]",
 		    "L3; Pnts; 10; Push or pull the gate by [D4] cm. Ref",
     		    "L4; Pnts; 2; Defend. Reduce attack damage by [(D4)] or [D4] Limit 1",
