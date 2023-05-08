@@ -229,14 +229,14 @@ function abdrop(){
 		    "L12; Pnts; 9; Attack. Damage: Force + [D12].  No defense abilities can be used against this attack"];
 
     var optionrn = ["Select Ability", 
-		    "R1; Pnts; 2; Move. Movement + [D4]",
+		    "R1; Pnts; 2; Move. Movement + [D4] x2 cm",
 		    "R2; Pnts; 3; Counter Attack [D4]. Perform this attack after this figure is not defeated by an opponents attack", 
 		    "R3; Pnts; 2; Melee. Damage: Take one prep token from opponent. Chain Rush. Remove[D6]",
-		    "R4; Pnts; 3; Attack. Melee. Rush [(D6)]",
-		    "R5; Pnts; 4; Move. Movement + [D8]",
+		    "R4; Pnts; 3; Attack. Melee. Rush Damage: [(D6)]",
+		    "R5; Pnts; 4; Move. Movement + [D8] x2 cm",
 		    "R6; Pnts; 5; Counter Attack. Damage: [D8]. Perform this attack after this figure is not defeated by an opponent's attack",
 		    "R7; Pnts; 7; Melee. Chain Rush. Damage: [(D8)]",
-		    "R8; Pnts; 6; Move. Movement + [D12]",
+		    "R8; Pnts; 6; Move. Movement + [D12] x2 cm",
 		    "R9; Pnts; 6; Attack. Melee. Damage: [D12]",
 		    "R10; Pnts; 3; Sneak",
 		    "R11; Pnts; 2; Prep tokens spent to move this figure may move it 3cm instead of 2"];
