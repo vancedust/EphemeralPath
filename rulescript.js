@@ -52,3 +52,11 @@ function abdwn() {
 function opdwn() {
     window.open("ephemeral_path_organized_play_guide_v0.1.pdf");
 }
+
+function ldd() {
+    window.open("Starter Figure Set - Leaders Disruptors.pdf");
+}
+
+function ttrr() {
+    window.open("Starter Figure Set - Tacticians Runners.pdf");
+}
