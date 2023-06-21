@@ -54,9 +54,9 @@ function opdwn() {
 }
 
 function ldd() {
-    window.open("Starter Figure Set - Leaders Disruptors.pdf");
+    window.open("starter figure set leaders disruptors.pdf");
 }
 
 function ttrr() {
-    window.open("Starter Figure Set - Tacticians Runners.pdf");
+    window.open("starter figure set tacticians runners.pdf");
 }
